@@ -13,7 +13,7 @@ try {
 const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 1000,
-    height: 563,
+    height: 675,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -22,9 +22,9 @@ const createWindow = () => {
     },
   })
 
-  mainWindow.loadFile(path.join(__dirname, 'clientside/landingpage/index.html'));
+  mainWindow.loadFile(path.join(__dirname, 'clientside/landingpage/landingpage.html'));
 
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 }
 
 app.whenReady().then(() => {
