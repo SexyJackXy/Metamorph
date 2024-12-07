@@ -39,7 +39,6 @@ app.whenReady().then(() => {
 ipcMain.handle('dialog', (event, method, params) => {       
   return dialog[method](params)
     .then(result => {
-      console.log('MAIN.JS Dialog-Ergebnis:', result);
       return result; 
     })
 });

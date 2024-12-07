@@ -22,7 +22,7 @@
         <p class="text">Select Destination Folder</p>
         <div id="destionationDiv">
             <input id="destFolder_tbx">
-            <button class="smallButton" id="add_des_btn"><a>Add Folder</a></button>
+            <button class="smallButton" id="add_des_btn" onclick="addDestionationFolder()"><a>Add Folder</a></button>
         </div>
         <br></br>
         <p class="text">Add Folder</p>
@@ -31,8 +31,8 @@
                 <textarea id="srcFolder_tbx" cols="40" rows="5"></textarea>
             </div>
             <div id="aside">
-                <button class="smallButton" id="add_src_btn" onclick="openFolderDialog()">Add Folder</button>
-                <button class="smallButton" id="add_file_btn"><a>Add Data</a></button>
+                <button class="smallButton" id="add_src_btn" onclick="addSourceFolder()">Add Folder</button>
+                <button class="smallButton" id="add_file_btn" onclick="addSourceFile()"><a>Add Data</a></button>
             </div>
         </div>
         <div id="actionButtons">
