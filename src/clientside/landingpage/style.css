@@ -28,11 +28,3 @@ body{
 #backupplansCounter{
     margin-bottom: 0;
 }
-
-
-/* max heigt 563px */
-@media screen and (max-height: 700px) {
-    body{
-        margin-top: auto;
-    }
-}

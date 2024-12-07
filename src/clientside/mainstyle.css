@@ -18,28 +18,29 @@ button {
     border-radius: 0px;
 }
 
-button:hover{
+button:hover {
     background-color: #420a1c;
+    cursor: pointer;
 }
 
-button>a{
+button>a {
     text-decoration: none;
     color: white;
 }
 
-.text{
+.text {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 1.5ch;
 }
 
-.footerImg{
+.footerImg {
     height: 2em;
     margin: 0.25em 1em;
     z-index: 1;
 }
 
-footer{
+footer {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -57,13 +58,28 @@ content {
     height: 100%;
 }
 
-body{
+body {
     margin: 0;
 }
 
-html{
+html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     overflow-y: hidden;
+
+}
+
+/* max screen heigt 563px */
+@media screen and (max-height: 700px) {
+    body {
+        margin-top: auto !important;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .content {
+        width: 99% !important;
+        max-width: 1500px !important;
+    }
 }
