@@ -40,6 +40,17 @@ button>a {
     z-index: 1;
 }
 
+.content {
+    height: 100%;
+    margin-top: auto;
+    text-align: left;
+    justify-content: start !important;
+    margin: 0 0.5em;
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
 footer {
     position: absolute;
     display: flex;
