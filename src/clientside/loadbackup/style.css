@@ -1,0 +1,57 @@
+.content {
+    display: table !important;
+}
+
+.leftSide {
+    display: grid;
+    float: left;
+    justify-content: center;
+    width: 12%;
+}
+
+.center {
+    float: left;
+    display: grid;
+    margin-right: auto;
+    margin-left: auto;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+    margin-top: 0.5em;
+    width: 75%;
+}
+
+.center>div {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+}
+
+.rightSide {
+    float: right;
+    display: grid;
+    justify-content: center;
+    width: 12%;
+}
+
+.smallButton {
+    margin: 0.5em 0 0 0 !important;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 155px !important;
+    float: inline-end;
+}
+
+#treeView {
+    resize: none;
+    height: 350px;
+    padding: 0;
+    padding-left: 0.5em;
+    border-radius: 0px;
+    border: 1px solid black;
+    box-shadow: none;
+    background-color: #ecf0f1;
+    width: 99%;
+}
