@@ -1,0 +1,19 @@
+body{
+    height: max-content ;
+    margin-top: 13vh;
+}
+
+.content{
+    display: grid;
+}
+
+.heading{
+    font-weight: bolder;
+    font-size: 2ch;
+}
+
+
+.subHeading{
+    font-weight: bolder;
+    font-size: 1.5ch;
+}
