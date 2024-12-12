@@ -32,3 +32,11 @@ async function addSourceFolder() {
 async function addSourceFile() {
     await addFolder('file', 'srcFolder_tbx');
 }
+
+function saveBackup(){
+    var destiantionPath = getElementById("destFolder_tbx");
+    var sourceList = getElementById("srcFolder_tbx");
+
+    console.log(destiantionPath);
+    console.log(sourceList);
+}
