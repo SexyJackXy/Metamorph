@@ -28,7 +28,7 @@
         <p class="text">Add Folder</p>
         <div id="sourceDiv">
             <div style="width: 100%;">
-                <textarea id="srcFolder_tbx" cols="40" rows="5" readonly></textarea>
+                <textarea id="srcFolder_tbx" readonly></textarea>
             </div>
             <div id="aside">
                 <button class="smallButton" id="add_src_btn" onclick="addSourceFolder()">Add Folder</button>
@@ -38,7 +38,7 @@
         <div id="actionButtons">
             <button class="button"><a>Start Backup</a></button>
             <button class="button"><a>Load Backup</a></button>
-            <button class="button"><a>Save Backup</a></button>
+            <button class="button" onclick="save_btn_click()"><a>Save Backup</a></button>
         </div>
     </div>
 </body>

@@ -16,8 +16,8 @@ const createWindow = () => {
     width: 1000,
     height: 675,
     webPreferences: {
+      nodeIntegration: true,
       preload: path.join(__dirname, 'preloader.js'),
-      // preload: path.join(__dirname, 'scripts/preload.js'),
     },
   })
 
@@ -39,9 +39,11 @@ app.whenReady().then(() => {
 ipcMain.handle('dialog', (event, method, params) => {       
   return dialog[method](params)
     .then(result => {
+      console.log(result);
       return result; 
     })
 });
+
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()

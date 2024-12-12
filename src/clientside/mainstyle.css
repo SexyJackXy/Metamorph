@@ -13,19 +13,53 @@ button {
     padding: 0.7em;
     color: white;
     background-color: #801336;
+    background: linear-gradient(-45deg, rgba(128,19,54,1) 0%, rgba(188,20,63,1) 100%);
     border: 0;
     box-shadow: none;
-    border-radius: 0px;
+    border-radius: 0.5em;
 }
 
 button:hover {
-    background-color: #420a1c;
+    background-color: #4b061a;
     cursor: pointer;
 }
 
 button>a {
     text-decoration: none;
     color: white;
+}
+
+footer {
+    border-radius: 2em;
+    padding: 0 1em;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: #efefef;
+    width: 99%;
+    text-align: center;
+    bottom: 0;
+}
+
+content {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    margin: 0;
+    justify-items: center
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
 }
 
 .text {
@@ -49,36 +83,6 @@ button>a {
     width: 95%;
     margin: 0 auto;
     max-width: 1000px;
-}
-
-footer {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    background-color: #ecf0f1;
-    width: 100%;
-    color: white;
-    text-align: center;
-    bottom: 0;
-}
-
-content {
-    display: grid;
-    justify-content: center;
-    text-align: center;
-    height: 100%;
-}
-
-body {
-    margin: 0;
-}
-
-html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
-
 }
 
 /* max screen heigt 563px */
