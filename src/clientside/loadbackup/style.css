@@ -55,3 +55,17 @@
     background-color: #ecf0f1;
     width: 99%;
 }
+
+@media screen and (max-width: 1250px) {
+    #treeView {
+        width: 65vw !important;
+        max-width: 1500px !important;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    #treeView {
+        width: 55vw !important;
+        max-width: 1500px !important;
+    }
+}
