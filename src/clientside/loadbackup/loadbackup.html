@@ -17,10 +17,10 @@
     <script src="./code.js"></script>
 </head>
 
-<body>
+<body onload="loadExsistingsBackup()">
     <div class="content">
         <div class="leftSide">
-            <button class="smallButton" id="back_btn""><a>Back</a></button>
+            <button class="smallButton" id="back_btn"><a>Back</a></button>
         </div>
         <div class="center">
             <div>
@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="rightSide">
-            <button class="smallButton" id="load_backup_btn" >Load</button>
+            <button class="smallButton" id="load_backup_btn" onclick="loadBackupPlan()">Load</button>
             <button class="smallButton" id="edit_backup_btn" >Edit</button>
             <button class="smallButton" id="open_backup_btn" >Open</button>
             <button class="smallButton" id="delet_backup_btn">Delete</button>
@@ -38,7 +38,7 @@
 
 <footer>
     <a class="footerA" href="../loadbackup/loadbackup.html"><img class="footerImg" src="../../../resources/backupplans.png"></a>
-    <a class="footerA" href="../create/createPage.html"></a><img class="footerImg" src="../../../resources/create.png"></a>
+    <a class="footerA" href="../createpage/createPage.html"><img class="footerImg" src="../../../resources/create.png"></a>
     <a class="footerA" href="../landingpage/landingpage.html"><img class="footerImg" src="../../../resources/home.png"></a>
 </footer>
 
