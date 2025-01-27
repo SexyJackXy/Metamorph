@@ -12,8 +12,8 @@ button {
     margin: 0.5em 0;
     padding: 0.7em;
     color: white;
-    background-color: #801336;
-    background: linear-gradient(-45deg, rgba(128,19,54,1) 0%, rgba(188,20,63,1) 100%);
+    background-color: #682bd7;
+    background: linear-gradient(-45deg, rgba(104, 43, 215, 1) 0%, rgba(189, 46, 149, 1) 100%);
     border: 0;
     box-shadow: none;
     border-radius: 0.5em;
