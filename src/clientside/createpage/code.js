@@ -54,13 +54,17 @@ async function copy_btn_click(params) {
     var sourceArray = sourceList.split('\n').map(item => item.trim()).filter(item => item !== '');                         //Array
     var destPath = document.getElementById('destFolder_tbx').value;  
 
-    var isDir = electron.checkifDir(sourceList);
-    console.log(isDir);
 
-    // if(sourceArray.length == 1){
-    //     electron.copyFile(sourceList,destPath)
-    // }
-    // else{
-    //     electron.copyFolder(sourceArray,destPath)
-    // }
+    document.body.style.cursor = 'wait';
+
+    electron.checkifDir(sourceList).then((result) => {
+        if (result) {
+            electron.copyFolder(sourceArray, destPath)
+        }
+        else {
+            electron.copyFile(sourceList, destPath)
+        }
+    }
+    );
+
 }
