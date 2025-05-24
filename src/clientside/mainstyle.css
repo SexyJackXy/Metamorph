@@ -13,7 +13,7 @@ button {
     padding: 0.7em;
     color: white;
     background-color: #682bd7;
-    background: linear-gradient(-45deg, rgba(104, 43, 215, 1) 0%, rgba(189, 46, 149, 1) 100%);
+    /* background: linear-gradient(-45deg, rgba(104, 43, 215, 1) 0%, rgba(189, 46, 149, 1) 100%); */
     border: 0;
     box-shadow: none;
     border-radius: 0.5em;

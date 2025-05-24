@@ -31,7 +31,6 @@ async function addSourceFile() {
     await addFolder('file', 'srcFolder_tbx');
 }
 
-
 async function save_btn_click(params) {
     var sourceList = document.getElementById('srcFolder_tbx').value;    //TextArea
     var destPath = document.getElementById('destFolder_tbx').value;     //Input
@@ -47,4 +46,21 @@ async function save_btn_click(params) {
 
     const data = JSON.stringify(backupPlan);
     await electron.toJson(fileName,data);
+}
+
+async function copy_btn_click(params) {
+    
+    var sourceList = document.getElementById('srcFolder_tbx').value;    //TextArea
+    var sourceArray = sourceList.split('\n').map(item => item.trim()).filter(item => item !== '');                         //Array
+    var destPath = document.getElementById('destFolder_tbx').value;  
+
+    var isDir = electron.checkifDir(sourceList);
+    console.log(isDir);
+
+    // if(sourceArray.length == 1){
+    //     electron.copyFile(sourceList,destPath)
+    // }
+    // else{
+    //     electron.copyFolder(sourceArray,destPath)
+    // }
 }
