@@ -55,6 +55,7 @@ function readAllFilesInFolder(folderPath) {
 }
 
 function copyFolder(pathsToBackup, destinationPath) {
+  console.log("Backup... Started");
   (async () => {
     try {
       await copyFullBackup(pathsToBackup, destinationPath);
@@ -73,7 +74,7 @@ function copyFile(sourcepath, destinaionpath) {
 
 function checkIfFileOrDir(filepath) {
   const path = filepath.trim();
-  return fsp.stat(path)  // gibt ein Promise zurück
+  return fsp.stat(path)
     .then(stats => {
       if (stats.isFile()) {
         return false; // es ist eine Datei
@@ -85,17 +86,4 @@ function checkIfFileOrDir(filepath) {
       console.error('Fehler beim Prüfen:', err.message);
       return null; // falls der Pfad nicht existiert oder ein Fehler auftritt
     });
-}
-
-function checkForSub(parent) {
-  try {
-    const items = fs.readdirSync(parent);
-    return items.some(item => {
-      const fullPath = path.join(parent, item);
-      return fs.statSync(fullPath).isDirectory();
-    });
-  } catch (err) {
-    console.error('Fehler beim Prüfen:', err.message);
-    return false;
-  }
 }
