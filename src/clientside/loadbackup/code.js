@@ -1,13 +1,14 @@
 async function loadExsistingsBackup() {
-    var backupplans = await electron.getFiles('src/meta/backups');
-    var treeView = document.getElementById('treeView');
-    var newLine = "\r\n";
-    backupplans.forEach(plans => {
-        treeView.value += plans + newLine;
-    });
-    console.log(treeView);
-}
+    var backupplans = await electron.readAllFiles('src/meta/backups');
+    var planListUl = document.getElementById('planListUl');
+    var list = [];
 
-async function loadBackupPlan() {
-    //Hier soll eine Liste Erstellt werden bei welcher per kilck auf den A der jeweilige Pfad geladen werden soll
+    backupplans.forEach(plan => {
+        var listEntry = "<li><a id=\"backupplan\" href=\"" + plan.fullPath + "\">" + plan.fileName + "</a></li>";
+        list.push(listEntry);
+    })
+
+    planListUl.innerHTML = list.join('');
+
+    console.log(list);
 }

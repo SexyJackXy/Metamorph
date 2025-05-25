@@ -1,43 +1,29 @@
-body{
+body {
     margin-top: 20vh;
 }
 
-.content {
-    display: table !important;
-}
-
-.leftSide {
-    display: grid;
-    float: left;
-    justify-content: center;
-    width: 12%;
-}
-
-.center {
-    float: left;
-    display: grid;
-    margin-right: auto;
-    margin-left: auto;
-    margin-right: 0.5%;
-    margin-left: 0.5%;
-    margin-top: 0.5em;
-    width: 75%;
-}
-
-.center>div {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    padding: 0;
+content {
+    display: flex !important;
+    justify-content: space-between;
     width: 100%;
 }
 
+.leftSide {
+    width: 25%;
+    float: left;
+}
+
+.center {
+    width: 50%;
+}
+
+.planList {
+    text-align: left;
+}
+
 .rightSide {
+    width: 25%;
     float: right;
-    display: grid;
-    justify-content: center;
-    width: 12%;
 }
 
 .smallButton {
@@ -45,31 +31,24 @@ body{
     padding-top: 3px;
     padding-bottom: 3px;
     width: 155px !important;
-    float: inline-end;
 }
 
-#treeView {
-    resize: none;
-    height: 350px;
-    padding: 0;
-    padding-left: 0.5em;
+#planListUl {
     border-radius: 0px;
+    background-color: lightgray;
     border: 1px solid black;
-    box-shadow: none;
-    background-color: #ecf0f1;
-    width: 99%;
+    margin: 0.5em 0 0 0 !important;
+    list-style: none;
+    padding: 0.25em 0.5em;
+    height: 500px;
 }
 
-@media screen and (max-width: 1250px) {
-    #treeView {
-        width: 65vw !important;
-        max-width: 1500px !important;
-    }
+#backupplan {
+    text-decoration: none;
+    color: black;
 }
 
-@media screen and (max-width: 880px) {
-    #treeView {
-        width: 55vw !important;
-        max-width: 1500px !important;
-    }
+#backupplan:hover {
+    color: #682bd7;
+    padding-left: 0.75em;
 }

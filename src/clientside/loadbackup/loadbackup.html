@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Metamorph</title>
+    <title>Load</title>
     <link rel="stylesheet" href="../mainstyle.css" type="text/css">
     <link rel="stylesheet" href="./style.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,22 +18,18 @@
 </head>
 
 <body onload="loadExsistingsBackup()">
-    <div class="content">
+    <content>
         <div class="leftSide">
             <button class="smallButton" id="back_btn"><a href="../landingpage/landingpage.html">Back</a></button>
         </div>
         <div class="center">
             <div>
-                <div class="editable" contenteditable="true">
-                    <ul>
+                <div class="planList">
+                    <ul id="planListUl">
                         <li>List item</li>
                         <li>List item</li>
                     </ul>
                 </div>
-                
-            <textarea id="treeView" readonly>
-
-            </textarea>
             </div>
         </div>
         <div class="rightSide">
@@ -42,7 +38,7 @@
             <button class="smallButton" id="open_backup_btn" >Open</button>
             <button class="smallButton" id="delet_backup_btn">Delete</button>
         </div>
-    </div>
+    </content>
 </body>
 
 <footer>

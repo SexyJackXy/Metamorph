@@ -13,7 +13,7 @@ contextBridge.exposeInMainWorld('electron', {
       console.log('hat geklappt');
     });
   },
-  getFiles: (folderPath) => getAllFilesAsList(folderPath),
+  readAllFiles: (folderPath) => readAllFilesInFolder(folderPath),
   copyFolder: (sourcepaths, destinationpath) => copyFolder(sourcepaths, destinationpath),
   copyFile: (sourcepath, destinationpath) => copyFile(sourcepath, destinationpath),
   checkifDir: (filepath) => checkIfFileOrDir(filepath),
