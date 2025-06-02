@@ -4,7 +4,7 @@ async function loadExsistingsBackup() {
     var list = [];
 
     backupplans.forEach(plan => {
-        var listEntry = "<li><a id=\"backupplan\" href=\"" + plan.fullPath + "\">" + plan.fileName + "</a></li>";
+        var listEntry = "<li><a id=\"backupplan\" href=\"#\">" + plan.fileName + "</a></li>";
         list.push(listEntry);
     })
 

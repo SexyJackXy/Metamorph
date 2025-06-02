@@ -17,6 +17,7 @@ contextBridge.exposeInMainWorld('electron', {
   copyFolder: (sourcepaths, destinationpath) => copyFolder(sourcepaths, destinationpath),
   copyFile: (sourcepath, destinationpath) => copyFile(sourcepath, destinationpath),
   checkifDir: (filepath) => checkIfFileOrDir(filepath),
+  countFilesInDir: (folderPath) => countFilesInDir(folderPath),
 });
 
 function getAllFilesAsList(dirname) {
@@ -86,4 +87,16 @@ function checkIfFileOrDir(filepath) {
       console.error('Fehler beim Prüfen:', err.message);
       return null; // falls der Pfad nicht existiert oder ein Fehler auftritt
     });
+}
+
+function countFilesInDir(folderPath) {
+  return new Promise((resolve, reject) => {
+    fs.readdir(folderPath, (err, files) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(files.length);
+      }
+    });
+  });
 }
