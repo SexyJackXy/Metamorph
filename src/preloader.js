@@ -7,7 +7,7 @@ const path = require('path');
 contextBridge.exposeInMainWorld('electron', {
   openDialog: (method, config) => ipcRenderer.invoke('dialog', method, config),
   toJson: (fileName, data) => {
-    fs.writeFile('src/meta/backups/' + fileName, data, function (err) {
+    fs.writeFile('src/internal/plans/' + fileName, data, function (err) {
       if (err) throw err;
       console.log('Results Received');
       console.log('hat geklappt');

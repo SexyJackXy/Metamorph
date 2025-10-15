@@ -34,25 +34,50 @@ async function addSourceFile() {
 async function save_btn_click(params) {
     var sourceList = document.getElementById('srcFolder_tbx').value;    //TextArea
     var destPath = document.getElementById('destFolder_tbx').value;     //Input
-    let fielDate=date.getDate() + "."+ parseInt(date.getMonth()+1) +"."+date.getFullYear();
-    const fileName = "Backup " + fielDate + ".json"
+    var statusMessage = document.getElementsByClassName('feedback')[0];
 
-    const backupPlan = {
-        destinaionpath: destPath,
-        sourcepaths: sourceList,
-        compress:false,
-        incremental:false,
-    };
+    const date = new Date();
+    let fielDate = date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear();
+    const fileName = "Backup " + fielDate + ".json";
 
-    const data = JSON.stringify(backupPlan);
-    await electron.toJson(fileName,data);
+     statusMessage.style.display = "none"
+
+    if (destPath == "") {
+        statusMessage.textContent = `Destination muss ausgefüllt sein`;
+        statusMessage.style.color = 'red';
+        statusMessage.style.display = "block"
+    }
+    else if (sourceList == "") {
+        statusMessage.textContent = `Sourcelist muss ausgefüllt sein`;
+        statusMessage.style.color = 'red';
+        statusMessage.style.display = "block"
+    }
+    else {
+        const backupPlan = {
+            destinationpath: destPath,
+            sourcepaths: sourceList,
+            compress: false,
+            incremental: false,
+        };
+
+        try {
+            const data = JSON.stringify(backupPlan);
+            await electron.toJson(fileName, data);
+
+            statusMessage.style.display = "block"
+        } catch (error) {
+            // Fehlerbehandlung
+            statusMessage.textContent = `Fehler beim Speichern: ${error.message}`;
+            statusMessage.style.color = 'red';
+            statusMessage.style.display = "block"
+        }
+    }
 }
 
 async function copy_btn_click(params) {
-    
     var sourceList = document.getElementById('srcFolder_tbx').value;    //TextArea
     var sourceArray = sourceList.split('\n').map(item => item.trim()).filter(item => item !== '');                         //Array
-    var destPath = document.getElementById('destFolder_tbx').value;  
+    var destPath = document.getElementById('destFolder_tbx').value;
 
 
     document.body.style.cursor = 'wait';

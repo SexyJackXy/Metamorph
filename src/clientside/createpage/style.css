@@ -61,12 +61,24 @@ body{
 }
 
 #actionButtons{
-    margin-top: 1.5em;
     display: flex;
     justify-content: space-between;
     bottom: 4em;
 }
 
+#feedbacktext{
+    display: flex;
+    justify-content: flex-end;
+}
+
 .button{
     width: 32%;
+}
+
+.feedback{
+    display: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2ch;
+    font-family: Arial, Helvetica, sans-serif;
 }
